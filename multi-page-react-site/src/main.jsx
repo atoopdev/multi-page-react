@@ -9,12 +9,17 @@ import {
   Route,
 } from "react-router-dom"
 
+// existing imports
+import Root from "./routes/root"
+
 // entry point
 // first route is the root route as the rest of routes will render inside. Thus root layout of IU.
 
 const router = createBrowserRouter([{
   path: "/",
-  element: <div>Hello world!</div>
+  // element: <div>Hello world!</div>
+  // do this once routes/root created
+  element: <Root />,
 },
 ]);
 
