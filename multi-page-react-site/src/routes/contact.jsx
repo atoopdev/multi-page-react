@@ -7,7 +7,7 @@ export default function Contact(){
         avatar: "https://placekitten.com/g/200/200",
         twitter: "atoop",
         notes: "for testing",
-        favorite: true;
+        favorite: true
     };
 
     return (
@@ -88,4 +88,3 @@ export default function Contact(){
         </Form>
       );
     }
-}
