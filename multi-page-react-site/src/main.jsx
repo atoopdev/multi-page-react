@@ -10,6 +10,7 @@ import {
 } from "react-router-dom"
 
 // entry point
+// first route is the root route as the rest of routes will render inside. Thus root layout of IU.
 
 const router = createBrowserRouter([{
   path: "/",
