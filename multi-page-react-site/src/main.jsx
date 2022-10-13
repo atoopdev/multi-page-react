@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './App'
 import './index.css'
+import ErrorPage from "./error-page"
 
 import {
   createBrowserRouter,
@@ -20,6 +21,7 @@ const router = createBrowserRouter([{
   // element: <div>Hello world!</div>
   // do this once routes/root created
   element: <Root />,
+  errorElement: <ErrorPage />,
 },
 ]);
 
