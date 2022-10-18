@@ -1,8 +1,15 @@
 // required to make <Outlet /> work
 // Link allows url to update without requiring another document from server
-import { Outlet, Link } from "react-router-dom"
+import { Outlet, Link, useLoaderData } from "react-router-dom"
+import { getContacts } from "../contacts"
+
+export async function loader(){
+    const contacts = await getContacts();
+    return {contacts};
+}
 
 export default function Root() {
+    const {contacts} = useLoaderData();
     return (
       <>
         <div id="sidebar">
@@ -30,7 +37,11 @@ export default function Root() {
               <button type="submit">New</button>
             </form>
           </div>
+
+          {/* ------------- Nav ------------------ */}
+
           <nav>
+            
             <ul>
               <li>
                 <Link to={`contacts/1`}>Your Name</Link>
