@@ -1,3 +1,7 @@
+// required to make <Outlet /> work
+// Link allows url to update without requiring another document from server
+import { Outlet, Link } from "react-router-dom"
+
 export default function Root() {
     return (
       <>
@@ -37,7 +41,10 @@ export default function Root() {
             </ul>
           </nav>
         </div>
-        <div id="detail"></div>
+        <div id="detail">
+            {/* required to make child routes display in page */}
+            <Outlet />
+        </div>
       </>
     );
   }

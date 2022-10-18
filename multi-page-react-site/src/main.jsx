@@ -24,11 +24,15 @@ const router = createBrowserRouter([{
   // do this once routes/root created
   element: <Root />,
   errorElement: <ErrorPage />,
+  // allows the link to be displayed inside root - but needs to be paired with <outlet> in root.jsx to work
+  children:[
+    {
+      path: "contacts/:contactID",
+      element: <Contact />,
+    },
+  ],
 },
-{
-  path: "contacts/:contactID",
-  element: <Contact />,
-},
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
