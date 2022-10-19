@@ -2,11 +2,11 @@ import { Form } from "react-router-dom"
 
 export default function Contact(){
     const contact ={
-        first: "Amanda",
-        last: "Toop",
+        first: "First_Name",
+        last: "Last_Name",
         avatar: "https://placekitten.com/g/200/200",
-        twitter: "atoop",
-        notes: "for testing",
+        twitter: "twitter_handle",
+        notes: "filler data",
         favorite: true
     };
 

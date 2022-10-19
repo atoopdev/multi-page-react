@@ -11,7 +11,7 @@ import {
 } from "react-router-dom"
 
 // existing imports
-import Root, {loader as rootLoader } from "./routes/root"
+import Root, {loader as rootLoader, action as rootAction } from "./routes/root"
 import ErrorPage from "./error-page"
 import Contact from "./routes/contact"
 
@@ -25,6 +25,7 @@ const router = createBrowserRouter([{
   element: <Root />,
   errorElement: <ErrorPage />,
   loader: rootLoader,
+  action: rootAction,
   // allows the link to be displayed inside root - but needs to be paired with <outlet> in root.jsx to work
   children:[
     {
