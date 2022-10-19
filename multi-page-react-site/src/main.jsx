@@ -14,6 +14,7 @@ import {
 import Root, {loader as rootLoader, action as rootAction } from "./routes/root"
 import ErrorPage from "./error-page"
 import Contact, {loader as contactLoader} from "./routes/contact"
+import EditContact from "./routes/edit"
 
 // entry point
 // first route is the root route as the rest of routes will render inside. Thus root layout of IU.
@@ -31,6 +32,12 @@ const router = createBrowserRouter([{
     {
       path: "contacts/:contactId",
       element: <Contact />,
+      loader: contactLoader,
+    },
+    // want to be rendered in root route's outlet, so make sibling to child route
+    {
+      path: "contacts/:contactId/edit",
+      element: <EditContact />,
       loader: contactLoader,
     },
   ],
